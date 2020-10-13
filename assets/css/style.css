@@ -1,0 +1,188 @@
+/**
+ * Note that these styles are loaded *before* editor styles, so that
+ * editor-specific styles using the same selectors will take precedence.
+ * Обратите внимание, что эти стили загружаются перед стилями темы и других плагинов.
+ * Другие стили, использующие такие же селекторы, будут иметь приоритет.
+ * Например button темы будет переписывать стили кнопки
+ * Используйте максимально специфичные стили для слайдера.
+ */
+
+/* Slider from slick slider */
+.slick-slider {
+  position: relative;
+
+  display: block;
+  box-sizing: border-box;
+
+  -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+
+/* Arrows */
+.slick-slider .slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -18px 0 0 0;
+  z-index: 10;
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  color: transparent;
+  opacity: 0.5;
+  transition: 0.25s ease;
+}
+.slick-slider .slick-arrow:hover,
+.slick-slider .slick-arrow:focus {
+    opacity: 0.8;
+    transform: scale(1.1);
+    outline: currentColor;
+}
+.slick-slider .slick-prev {
+  left: 4px;
+  background: url('../img/arrow_back.svg') no-repeat;
+}
+.slick-slider .slick-next {
+  right: 4px;
+  background: url('../img/arrow_forward.svg') no-repeat;
+}
+
+/* Dots */
+.slick-dots {
+    margin: 24px auto 16px auto;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.slick-dots li {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    margin: 0 6px;
+}
+.slick-dots button,
+.slick-dots button:hover,
+.slick-dots button:focus {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: #adc7af;
+    outline: none;
+    margin: 0;
+    padding: 0;
+}
+
+.slick-dots li.slick-active button {
+    background: #305c43;
+}
