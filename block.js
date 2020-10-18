@@ -1,10 +1,14 @@
 ( function( blocks, element, blockEditor ) {
 	var el = element.createElement;
 	var InnerBlocks = blockEditor.InnerBlocks;
+
 	blocks.registerBlockType( 'rspl-example/slider', {
-		// blocks.registerBlockType( 'gutenberg-examples/example-07', {
 		title: 'Example: Slider',
+		icon: 'embed-photo', // Иконка Svg или Dashicons. https://developer.wordpress.org/resource/dashicons/.
 		category: 'layout',
+		keywords: [ 'slider', 'gallery', 'section' ],
+		supports: { align: ["wide","full"], default: 'full' },
+	
 		edit: function( props ) {
 			return el(
 				'div',
@@ -12,6 +16,7 @@
 				el( InnerBlocks )
 			);
 		},
+	
 		save: function( props ) {
 			return el(
 				'div',
@@ -20,4 +25,9 @@
 			);
 		},
 	} );
-} )( window.wp.blocks, window.wp.element, window.wp.blockEditor );
+} )
+(
+	window.wp.blocks,
+	window.wp.element,
+	window.wp.blockEditor 
+);

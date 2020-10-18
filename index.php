@@ -18,7 +18,7 @@ defined( 'ABSPATH' ) || exit;
 function rspl_example_slider_register_block() { // регистрируем блок
 
 	if ( ! function_exists( 'register_block_type' ) ) {
-		// Slider is not active.
+		// Gutenberg is not active.
 		return;
 	}
 
